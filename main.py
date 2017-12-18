@@ -22,13 +22,18 @@ def is_prime(n):
 array_primes = []
 array_diff = []
 
+file = open("output.txt", 'w')
 previous=0
-for i in range(1000):
+for i in range(10000):
     if(is_prime(i)):
         diff = i - previous
         previous = i
         array_primes.append(i)
         array_diff.append(diff)
+        file.write(str(diff))
+        file.write('\t')
 
-print(array_primes)
-print(array_diff)    
+file.close()
+
+#print(array_primes)
+#print(array_diff)    
