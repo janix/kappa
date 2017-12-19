@@ -34,8 +34,8 @@ for i in range(10000):
         file.write(str(i).zfill(15) + ' ')
         file.write(str(diff))
         file.write('\t')
-        tmp_file.write(str(bin(i)).lstrip('-0b').zfill(15) + ' ')
-        tmp_file.write(str(diff) + '\t')
+        tmp_file.write(str(bin(i)).lstrip('-0b').zfill(15) + ' ' + str(i).zfill(4) + ' ')
+        tmp_file.write(str(diff) + '\n')
 file.close()
 
 #print(array_primes)
