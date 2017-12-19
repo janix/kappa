@@ -23,6 +23,7 @@ array_primes = []
 array_diff = []
 
 file = open("output.txt", 'w')
+tmp_file = open("tmp_file.txt", 'w')
 previous=0
 for i in range(10000):
     if(is_prime(i)):
@@ -30,9 +31,10 @@ for i in range(10000):
         previous = i
         array_primes.append(i)
         array_diff.append(diff)
+        file.write(str(i) + ':' + str(bin(i)).lstrip('-0b').zfill(16) + '\t')
         file.write(str(diff))
         file.write('\t')
-
+        tmp_file.write(str(bin(i)).lstrip('-0b').zfill(16) + ' ')
 file.close()
 
 #print(array_primes)
