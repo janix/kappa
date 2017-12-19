@@ -31,10 +31,11 @@ for i in range(10000):
         previous = i
         array_primes.append(i)
         array_diff.append(diff)
-        file.write(str(i) + ':' + str(bin(i)).lstrip('-0b').zfill(16) + '\t')
+        file.write(str(i).zfill(15) + ' ')
         file.write(str(diff))
         file.write('\t')
-        tmp_file.write(str(bin(i)).lstrip('-0b').zfill(16) + ' ')
+        tmp_file.write(str(bin(i)).lstrip('-0b').zfill(15) + ' ')
+        tmp_file.write(str(diff) + '\t')
 file.close()
 
 #print(array_primes)
