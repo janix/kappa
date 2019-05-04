@@ -1,4 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/python3.7
+
+from baseconvert import base
 
 def is_prime(n):
   if n == 2 or n == 3: return True
@@ -29,9 +31,8 @@ for i in range(1,number_limit,1):
     if(is_prime(i)):
         index += 1
         j = suma(suma(suma(i)))
-        vector.append([str(index).zfill(3),str(i).zfill(3),j,bin(i).zfill(12)])
+        vector.append([str(index).zfill(3),str(i).zfill(3),j, base(i,10,9)])
 
 for item in vector:
-    print(item),
-    if int(item[0]) % 3 == 0:
-        print("")
+#   print (item[2],end=" ")
+    print(item)
