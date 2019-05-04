@@ -23,7 +23,7 @@ def suma(g):
         sum += d
     return sum
 
-number_limit = 1000
+number_limit = 300
 vector = []
 
 index = 0
@@ -50,9 +50,21 @@ while item < len(vector) - 3:
     i_six = int(base(item+1, 10, 6, string=True))
     l = suma(suma(suma(suma(int(nine)))))
     diff = vector[item+1] - vector[item]
+    i_ten = item+1
+    test = nine + int(base(vector[item+3], 10, 9, string=True))
+    test2 = vector[item] + vector[item+1]
+    test3 = vector[item] + vector[item+2]
+    test4 = vector[item] + vector[item+3]
+    test5 = int(base(vector[item+1], 10, 9, string=True))-nine
+    test6 = int(base(vector[item+2], 10, 9, string=True))-nine
+    test7 = int(base(vector[item+3], 10, 9, string=True))-nine
+
+
 #    print("[",item+1,prime,l,diff,k-prime,"]",end=" ")
 #    print(j,end=" ")
-    print("[", item+1,i_nine,i_eight,i_seven,i_six,prime,nine,eight,seven,six,"]")
+#    print("[", i_ten,prime,"|",nine,"]", test2,test3,test4)
 #    if item%3 == 0:
 #        print("")
+    print(i_ten,prime,nine,test5,test6,test7,nine-(test5+test6+test7))
+    
     item += 1
