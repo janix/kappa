@@ -40,6 +40,7 @@ while item < len(vector) - 3:
 #    print(var, end=" ")
     prime = vector[item]
     j = suma(suma(suma(suma(vector[item]))))
+    j3 = suma(suma(suma(suma(vector[item+3]))))
     nine = int(base(vector[item], 10, 9, string=True))
     eight = int(base(vector[item], 10, 8, string=True))
     seven = int(base(vector[item], 10, 7, string=True))
@@ -49,22 +50,24 @@ while item < len(vector) - 3:
     i_seven = int(base(item+1, 10, 7, string=True))
     i_six = int(base(item+1, 10, 6, string=True))
     l = suma(suma(suma(suma(int(nine)))))
-    diff = vector[item+1] - vector[item]
+    diff1 = vector[item+1] - vector[item]
+    diff2 = vector[item+2] - vector[item]
+    diff3 = vector[item+3] - vector[item]
     i_ten = item+1
     test = nine + int(base(vector[item+3], 10, 9, string=True))
     test2 = vector[item] + vector[item+1]
     test3 = vector[item] + vector[item+2]
     test4 = vector[item] + vector[item+3]
-    test5 = int(base(vector[item+1], 10, 9, string=True))-nine
-    test6 = int(base(vector[item+2], 10, 9, string=True))-nine
+    test5 = int(base(vector[item+1], 10, 9, string=True))
+    test6 = int(base(vector[item+2], 10, 9, string=True))
     test7 = int(base(vector[item+3], 10, 9, string=True))-nine
-
+    test9 = int(base(vector[item+3], 10, 9, string=True))
 
 #    print("[",item+1,prime,l,diff,k-prime,"]",end=" ")
 #    print(j,end=" ")
 #    print("[", i_ten,prime,"|",nine,"]", test2,test3,test4)
 #    if item%3 == 0:
 #        print("")
-    print(i_ten,prime,nine,test5,test6,test7,nine-(test5+test6+test7))
+    print(prime,nine,nine-vector[item+3])
     
     item += 1
