@@ -33,5 +33,5 @@ for i in range(1,number_limit,1):
 
 for item in vector:
     print(item),
-    if int(item[0]) % 5 == 0:
+    if int(item[0]) % 3 == 0:
         print("")
