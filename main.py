@@ -24,21 +24,14 @@ def suma(g):
 number_limit = 1000
 vector = []
 
-for i in range(4,number_limit,1):
-    if(is_prime(i)):
-        j = suma(suma(suma(i)))
-        vector.append([i,j])
-
-#for n in range(1,9,1):
-#    for item in vector:
-#        if item[1] == n:
-#            print item
-
 index = 0
-for item in vector:
-    index += 1
-    print (item[1]),
-    if index % 6 == 0:
-        print(" ")
+for i in range(1,number_limit,1):
+    if(is_prime(i)):
+        index += 1
+        j = suma(suma(suma(i)))
+        vector.append([str(index).zfill(3),str(i).zfill(3),j,bin(i).zfill(12)])
 
-#print(vector)
+for item in vector:
+    print(item),
+    if int(item[0]) % 5 == 0:
+        print("")
