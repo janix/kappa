@@ -23,7 +23,7 @@ def suma(g):
         sum += d
     return sum
 
-number_limit = 1000
+number_limit = 10000
 vector = []
 
 index = 0
@@ -38,21 +38,13 @@ item = 0
 while item < len(vector) - 3:
 #    var = vector[item] + vector[item+3]
 #    print(var, end=" ")
-    prime = vector[item]
     j = suma(suma(suma(suma(vector[item]))))
-    nine = int(base(vector[item], 10, 9, string=True))
-    eight = int(base(vector[item], 10, 8, string=True))
-    seven = int(base(vector[item], 10, 7, string=True))
-    six = int(base(vector[item], 10, 6, string=True))
-    i_nine = int(base(item+1, 10, 9, string=True))
-    i_eight = int(base(item+1, 10, 8, string=True))
-    i_seven = int(base(item+1, 10, 7, string=True))
-    i_six = int(base(item+1, 10, 6, string=True))
-    l = suma(suma(suma(suma(int(nine)))))
-    diff = vector[item+1] - vector[item]
-#    print("[",item+1,prime,l,diff,k-prime,"]",end=" ")
+    k = base(vector[item], 10, 9, string=True)
+    l = suma(suma(suma(suma(int(k)))))
+    diff = vector[item+3] - vector[item]
+    print("[",item+1,vector[item],k,l,diff,"]",end=" ")
 #    print(j,end=" ")
-    print("[", item+1,i_nine,i_eight,i_seven,i_six,prime,nine,eight,seven,six,"]")
-#    if item%3 == 0:
-#        print("")
     item += 1
+    if item%3 == 0:
+        print("")
+
