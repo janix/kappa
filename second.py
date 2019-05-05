@@ -23,22 +23,26 @@ def suma(g):
         sum += d
     return sum
 
-number_limit = 300
+number_limit = 100
 
 i = 1
 
-def test8(i):
-    return int(base(i, 10, 8, string=True))
-
-def test9(i):
-    return int(base(i, 10, 9, string=True))
+def test(i,b):
+    return int(base(i, 10, b, string=True))
 
 def reduction(i):
     return suma(suma(suma(suma(i))))
+def formatting(i):
+    if(not is_prime(i)):
+        return ""
+    else:
+        return "+"
+def n6(i):
+    if (i%6==1 or i%6==5):
+        return "*"
+    else:
+        return ""
 
 while i < number_limit:
-    if(is_prime(i)):
-        print(i, test8(i),reduction(test8(i)),"+")
-    else:
-        print(i, test8(i),reduction(test8(i)))
+    print(i,n6(i),formatting(i))
     i += 1
