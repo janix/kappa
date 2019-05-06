@@ -23,7 +23,7 @@ def suma(g):
         sum += d
     return sum
 
-number_limit = 100
+number_limit = 201
 
 i = 1
 
@@ -32,17 +32,24 @@ def test(i,b):
 
 def reduction(i):
     return suma(suma(suma(suma(i))))
-def formatting(i):
-    if(not is_prime(i)):
-        return ""
-    else:
-        return "+"
-def n6(i):
-    if (i%6==1 or i%6==5):
+def mark_prime(i):
+    if(is_prime(i)):
         return "*"
+    else:
+        return ""
+def n6(i):
+    if (i%6==1):
+        return "+"
+    elif (i%6==5):
+        return "-"
+    else:
+        return ""
+def n5(i):
+    if (i%5==0):
+        return "|"
     else:
         return ""
 
 while i < number_limit:
-    print(i,n6(i),formatting(i))
+    print(i,n6(i),mark_prime(i))
     i += 1
