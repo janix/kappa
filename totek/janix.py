@@ -1,6 +1,6 @@
 #!/usr/bin/python3.6
 
-with open('dl.txt','r') as fin:
+with open('dl_razem.txt','r') as fin:
     data = fin.readlines()
 
 n = 0
@@ -34,7 +34,7 @@ with open('newfile.txt','w') as fout:
 #        reformated_data[i] = str(reformated_data[i]).strip().replace(',','')
         lst = map(str,reformated_data[i])
         line = ",".join(lst)
-        fout.write(data[i][0].zfill(5)+ '  ')
+#        fout.write(data[i][0].zfill(5)+ '  ')
         fout.write(data[i][1]+'    ')
         fout.write(line)
         fout.write(str(i%3))
