@@ -16,7 +16,7 @@ while s < len(substring):
     s+=1
 print(len(substring))
 
-reformated_data = [['' for x in range(50)] for y in range(len(substring))]
+reformated_data = [['  ' for x in range(50)] for y in range(len(substring))]
 print(len(reformated_data))
 
 for i in range(len(substring)):
@@ -24,16 +24,20 @@ for i in range(len(substring)):
         k = 0
         while (k < 49):
             if k == int(substring[i][j])-1:
-                reformated_data[i][k] = substring[i][j]
+                reformated_data[i][k] = substring[i][j].zfill(2)
             else:
                 pass
             k+=1
 
 with open('newfile.txt','w') as fout:
-    fout.write(str(reformated_data))
+    for i in range(len(reformated_data)):
+#        reformated_data[i] = str(reformated_data[i]).strip().replace(',','')
+        lst = map(str,reformated_data[i])
+        line = ",".join(lst)
+        fout.write(line)
+        fout.write("\n")
 
-for i in range(len(reformated_data)):
-    print(reformated_data[i])
+
 
 
 
