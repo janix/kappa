@@ -9,16 +9,16 @@ new_data=[]
 for n in range(len(data)):
     data[n] = data[n].split(' ',2)
     data[n][2] = data[n][2].split(',',5)
+    data[n][2][5] = data[n][2][5].strip()
     data[n].append(tmp)
 
-for i in range(len(data)):
-    for j in range(0,6,1):
+    for j in data[n][2]:
         k = 0
         while (k < 49): 
-            if k == int(data[i][2][j])-1:
-                data[i][3][k] = data[i][2][j].zfill(2)
+            if k == int(j)-1:
+                data[n][3][k] = j.zfill(2)
             else:
-                pass
+                data[n][3][k] = '  '
             k+=1
 
-print(data[2][3])
+print(data[:][3])
