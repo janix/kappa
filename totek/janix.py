@@ -31,19 +31,16 @@ for i in range(len(substring)):
 
 with open('newfile.txt','w') as fout:
     for i in range(len(reformated_data)):
-#        reformated_data[i] = str(reformated_data[i]).strip().replace(',','')
         lst = map(str,reformated_data[i])
         line = ",".join(lst)
-#        fout.write(data[i][0].zfill(5)+ '  ')
         fout.write(data[i][1]+'    ')
         fout.write(line)
-        fout.write(str(i%3))
-        fout.write('  '+str(i%6))
-        fout.write('  '+str(i%9))
         fout.write("\n")
 
-
-
-
-
+with open('tail.txt','w') as ftail:
+    for tail in (reformated_data[len(reformated_data)-50:len(reformated_data)]):
+        lst = map(str,tail)
+        line = ",".join(lst)
+        ftail.write(line)
+        ftail.write("\n")
 
