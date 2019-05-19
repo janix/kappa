@@ -34,7 +34,12 @@ with open('newfile.txt','w') as fout:
 #        reformated_data[i] = str(reformated_data[i]).strip().replace(',','')
         lst = map(str,reformated_data[i])
         line = ",".join(lst)
+        fout.write(data[i][0].zfill(5)+ '  ')
+        fout.write(data[i][1]+'    ')
         fout.write(line)
+        fout.write(str(i%3))
+        fout.write('  '+str(i%6))
+        fout.write('  '+str(i%9))
         fout.write("\n")
 
 
