@@ -1,3 +1,5 @@
+#!/usr/bin/python3.6
+
 import csv
 data=[]
 with open('wyniki-lotto.csv', newline='') as csvfile:
@@ -25,7 +27,6 @@ for row in data:
 			new_data.append(row)
 		else:
 			new_data.append(line(row[i]))
-
 
 with open('formatted.csv', 'w', newline='') as csvout:
 	writer = csv.writer(csvout)
