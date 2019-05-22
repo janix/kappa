@@ -30,4 +30,4 @@ for row in data:
 
 with open('formatted.csv', 'w', newline='') as csvout:
 	writer = csv.writer(csvout)
-	writer.writerows(new_data)
+	writer.writerows(new_data[-126:])
