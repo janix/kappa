@@ -21,13 +21,13 @@ def line(item):
 new_data=[]
 for row in data:
 	for i in range(len(row)):
-		if i < 3:
+		if i < 4:
 			pass
 		elif (i == 3):
-			new_data.append(row)
+			new_data.append('  ')
 		else:
 			new_data.append(line(row[i]))
 
 with open('formatted.csv', 'w', newline='') as csvout:
-	writer = csv.writer(csvout)
-	writer.writerows(new_data[-126:])
+	writer = csv.writer(csvout, delimiter=';')
+	writer.writerows(new_data)
