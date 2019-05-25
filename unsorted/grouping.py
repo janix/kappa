@@ -12,8 +12,8 @@ def line(row):
 	string = []
 	for i in range(50):
 		string.append(str(i)+' ')
-		for item in row:
-			if (int(item) == i):
+		for j in range(len(row)):
+			if (j>3) and (int(row[j]) == i):
 				string[i] = row[0]+'|'
 				string[i] += str(row[1])+'.'+str(row[2])+'.'+str(row[3])
 				
