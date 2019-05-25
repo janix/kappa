@@ -21,13 +21,7 @@ def line(row):
 
 new_data=[]
 for row in data:
-	for i in range(len(row)):
-		if i < 4:
-			pass
-		else:
-#			line(row)
-			new_data.append(line(row))
-			break
+	new_data.append(line(row))
 
 with open('grouping.csv', 'w', newline='') as csvout:
 	writer = csv.writer(csvout, delimiter=',')
