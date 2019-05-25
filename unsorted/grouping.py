@@ -25,6 +25,7 @@ for row in data:
 		if i < 4:
 			pass
 		else:
+#			line(row)
 			new_data.append(line(row))
 			break
 
