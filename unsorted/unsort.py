@@ -29,5 +29,5 @@ for row in data:
 			new_data.append(line(row[i]))
 
 with open('formatted.csv', 'w', newline='') as csvout:
-	writer = csv.writer(csvout, delimiter=';')
+	writer = csv.writer(csvout, delimiter=',')
 	writer.writerows(new_data)
