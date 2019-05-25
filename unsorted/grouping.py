@@ -30,5 +30,5 @@ for row in data:
 			break
 
 with open('grouping.csv', 'w', newline='') as csvout:
-	writer = csv.writer(csvout, delimiter=';')
+	writer = csv.writer(csvout, delimiter=',')
 	writer.writerows(new_data[-126:])
