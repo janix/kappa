@@ -44,12 +44,9 @@ def n6(i):
         return "-"
     else:
         return ""
-def n5(i):
-    if (i%5==0):
-        return "|"
-    else:
-        return ""
+def mod(i):
+    return i%6
 
 while i < number_limit:
-    print(i,n6(i),mark_prime(i))
+    print(i,mod(i),test(i,7),mark_prime(i))
     i += 1
